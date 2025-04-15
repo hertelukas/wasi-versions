@@ -1,0 +1,11 @@
+[package]
+name = "wasi-versions"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+getrandom = "0.3.2"
+tokio = { version = "1.40.0", features = ["full"] }
+
+[patch.crates-io]
+tokio = { git = "https://github.com/dicej/tokio", branch = "wasip2" }

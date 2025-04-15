@@ -1,0 +1,9 @@
+[env]
+CC="/opt/wasi-sdk/bin/clang"
+CXX="/opt/wasi-sdk/bin/clang"
+
+[target.wasm32-wasip2]
+rustflags = [
+    "--cfg", "tokio_unstable",
+    "-C", "linker=/opt/wasi-sdk/bin/clang",
+]
